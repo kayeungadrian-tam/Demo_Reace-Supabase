@@ -1,0 +1,8 @@
+@import "constants";
+
+.dashboard {
+
+    & .main {
+        margin-left: $sidebar-width;
+    }
+}

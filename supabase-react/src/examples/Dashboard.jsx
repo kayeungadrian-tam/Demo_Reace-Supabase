@@ -1,0 +1,32 @@
+
+import { useHistory } from 'react-router'
+import { useAuth } from '../contexts/_Auth'
+
+import { MultipleDemo } from "../components/Sidebar"
+import '../assets/sass/sidebar.scss';
+
+export function Dashboard() {
+    // Get current user and signOut function from context
+    const { user, signOut } = useAuth()
+
+    const history = useHistory()
+
+    async function handleSignOut() {
+        // Ends user session
+        await signOut()
+
+        // Redirects the user to Login page
+        history.push('/login')
+    }
+
+    return (
+        <div className='dashboard'>
+            <MultipleDemo />
+            <div className='main'>
+                <p>Welcome, {user?.id}!</p>
+                <button onClick={handleSignOut}>Sign out</button>
+            </div>
+            {/* Change it to display the user ID too 👇*/}
+        </div>
+    )
+}
