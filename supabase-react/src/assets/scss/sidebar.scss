@@ -1,0 +1,37 @@
+@import "constants";
+
+.sidebar {
+    width: $sidebar-width;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #D3B1C2;
+    border-right: 1px solid #ccc;
+    // padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    // overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    & .title {
+        color: red;
+    }
+
+    .p-menu {
+        margin: 0 auto;
+    }
+
+    & .logoutButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding: $padding-size;
+    }
+}

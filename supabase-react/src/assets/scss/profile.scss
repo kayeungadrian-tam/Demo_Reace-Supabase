@@ -1,0 +1,32 @@
+@import "constants";
+
+.profile{
+    // margin-left: $sidebar-width;
+    display: block;
+    // height: 100%;
+    width: 100%;
+    // background-color: grey;
+}
+
+h1 {
+    color: #D3B1C2;
+}
+
+h1::after {
+    content: "";
+    display: flex;
+    align-items: center;
+    height: 3px;
+    width: 80%;
+    background-color: #D3B1C2;
+    margin: 0 auto;
+
+}
+
+.main{
+    // background-color: red;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+}

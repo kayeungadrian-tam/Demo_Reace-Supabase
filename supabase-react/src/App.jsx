@@ -13,6 +13,10 @@ import { Login } from './examples/Login'
 import { Dashboard } from './examples/Dashboard'
 import { PrivateRoute } from './components/PrivateRoute'
 
+import {Profile} from "./pages/Profile"
+import {Todo} from "./pages/Todo"
+
+
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import 'primeicons/primeicons.css';
@@ -37,9 +41,10 @@ function App() {
     <Router>
       <AuthProvider>
         <Switch>
-          <PrivateRoute exact path="/" component={Dashboard} />
+          <PrivateRoute exact path="/profile" component={Profile} />
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />
+          <Route path="/todo" component={Todo} />
         </Switch>
       </AuthProvider>
     </Router>

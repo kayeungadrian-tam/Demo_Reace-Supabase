@@ -45,6 +45,14 @@
 }
 
 
+
+body {
+  background-color: #613659;
+}
+
+
 .main {
-  padding-left: 250px;
+  /* padding-left: 250px; */
+  /* display: block; */
+  /* width: auto; */
 }

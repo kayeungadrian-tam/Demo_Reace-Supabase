@@ -2,8 +2,7 @@
 import { useHistory } from 'react-router'
 import { useAuth } from '../contexts/_Auth'
 
-import { MultipleDemo } from "../components/Sidebar"
-import '../assets/sass/sidebar.scss';
+import { Sidebar } from "../components/Sidebar"
 
 export function Dashboard() {
     // Get current user and signOut function from context
@@ -21,7 +20,7 @@ export function Dashboard() {
 
     return (
         <div className='dashboard'>
-            <MultipleDemo />
+            <Sidebar />
             <div className='main'>
                 <p>Welcome, {user?.id}!</p>
                 <button onClick={handleSignOut}>Sign out</button>
